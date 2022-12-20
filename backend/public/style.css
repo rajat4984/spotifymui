@@ -122,10 +122,6 @@ input[type="number"] {
 
 /* ---------------LIST---------------- */
 
-.list{
-    min-height: 100vh;
-}
-
 .all-eq-heading {
   color: white;
   text-shadow: 2px 2px 0px black; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
@@ -141,7 +137,6 @@ input[type="number"] {
   margin: 2em 8em 4em 8em;
   border: 1.5px solid white;
   border-radius: 10px;
-  /* min-height: 100vh; */
 }
 
 .list-item,
