@@ -142,7 +142,7 @@ input[type="number"] {
 .list-item,
 .list-heading {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   justify-items: center;
   font-size: 1.2rem;
 }
@@ -177,6 +177,92 @@ input[type="number"] {
 .list-item:last-child {
   border-bottom: 0;
 }
+
+/* -------------------------MODALS----------------------------------------- */
+.edit-modal-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-modal {
+  position: relative;
+  background: linear-gradient(
+    to left top,
+    #820263,
+    #9b305c,
+    #aa545e,
+    #b3766b,
+    #b89685
+  );
+  width: 40%;
+  height: 70%;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.edit-modal-todo-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.edit-modal-todo-info > label {
+  padding: 1em 0;
+}
+
+.modal-weight-input,
+.modal-name-input,
+.modal-price-input,
+.edit-modal-weight-input,
+.edit-modal-name-input,
+.edit-modal-price-input {
+  padding: 0.5em;
+  width: 80%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.edit-modal-btn{
+  margin-top: 2em; 
+}
+
+.edit-modal-btn > button{
+  padding: .5em 2.5em;
+  border: none;
+  font-size: 1rem;
+  background-color:#b3766b;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.edit-modal-btn > button:hover{
+  opacity: .5;
+}
+
+.edit-cancel-icon{
+  font-size: 1.5rem;
+  float: right;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.edit-cancel-icon:hover{
+  opacity:0.5;
+}
+
 
 /* -----------FOOTER----------------- */
 a {

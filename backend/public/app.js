@@ -3,6 +3,7 @@ const nameInput = document.querySelector(".name-input");
 const weightInput = document.querySelector(".weight-input");
 const priceInput = document.querySelector(".price-input");
 const listItems = document.querySelector(".list-items");
+const modelContent = document.querySelector(".edit-modal-content");
 
 const checkValue = ()=>{
   if (nameInput.value === "" || weightInput.value ==="" || priceInput.value === ""){
@@ -70,6 +71,10 @@ const deleteEq = async (e) => {
   }
 };
 
+const editEq = async(e)=>{
+  modelContent.style.display = "flex";
+}
+
 const updateList = (data) => {
   data = data.eq;
   listItems.innerHTML = "";
@@ -80,7 +85,8 @@ const updateList = (data) => {
     <div class="eq-name">${eq.name}</div>
     <div class="eq-weight">${eq.weight}Kg</div>
     <div class="eq-price">$${eq.price}</div>
-    <div><i class="bi bi-trash" class="eq-delete" id="${eq._id}" onclick="deleteEq(event)"></i></div>
+    <div><i class="bi bi-trash eq-delete" id="${eq._id}" onclick="deleteEq(event)"></i></div>
+    <div><i class="bi bi-pencil-square" id="${eq._id}" onclick="editEq(event)"></i></div>
   </div>
 </div>`;
   });

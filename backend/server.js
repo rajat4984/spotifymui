@@ -13,7 +13,6 @@ app.use(express.static("./public"));
 app.use(cors());
 
 app.get("/allEq", async (req, res) => {
-  console.log("all eq hit");
   const eq = await Eq.find({});
   res.status(200).send({ eq });
 });
@@ -29,8 +28,7 @@ app.delete("/deleteEq/:id", async (req, res) => {
   if (!eq) {
     throw new NotFoundError(`No job with id ${id}`);
   }
-  res.status(200).send({eq});
-  console.log(eq);
+  res.status(200).send({ eq });
 });
 
 const start = async () => {
