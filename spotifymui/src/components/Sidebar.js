@@ -3,7 +3,7 @@ import {
   AddBox,
   Bookmark,
   Favorite,
-  Inbox,
+  Home,
   LibraryAdd,
   Search,
 } from "@mui/icons-material";
@@ -21,12 +21,12 @@ import React, { useState } from "react";
 import { BsSpotify } from "react-icons/bs";
 
 function Sidebar() {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [focus, setFocus] = useState(0);
 
-  const handleListTextClick = (index)=>{
+  const handleListTextClick = (index) => {
     setFocus(index);
-  }
+  };
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
@@ -47,7 +47,7 @@ function Sidebar() {
           onClick={(event) => handleListItemClick(event, 0)}
         >
           <ListItemIcon>
-            <Inbox />
+            <Home />
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItemButton>
@@ -117,10 +117,18 @@ function Sidebar() {
       <List component="nav" aria-label="secondary mailbox folder">
         <ListItem>
           <ListItemText
-        
             disableTypography
             primary={
-              <Typography variant="p" onClick={e=>handleListTextClick(6)}  style={{cursor:"pointer"}} color={focus===6?{color:"rgba(207, 207, 207, 0.9)"}:{color:"rgba(207, 207, 207, 0.6)"}} >
+              <Typography
+                variant="p"
+                onClick={(e) => handleListTextClick(6)}
+                style={{ cursor: "pointer" }}
+                color={
+                  focus === 6
+                    ? { color: "rgba(207, 207, 207, 0.9)" }
+                    : { color: "rgba(207, 207, 207, 0.6)" }
+                }
+              >
                 Chill Vibe
               </Typography>
             }
@@ -131,9 +139,18 @@ function Sidebar() {
           <ListItemText
             disableTypography
             primary={
-              <Typography variant="p" onClick={e=>handleListTextClick(7)}  style={{cursor:"pointer"}} color={focus===7?{color:"rgba(207, 207, 207, 0.9)"}:{color:"rgba(207, 207, 207, 0.6)"}} >
-              My Playlist #14
-            </Typography>
+              <Typography
+                variant="p"
+                onClick={(e) => handleListTextClick(7)}
+                style={{ cursor: "pointer" }}
+                color={
+                  focus === 7
+                    ? { color: "rgba(207, 207, 207, 0.9)" }
+                    : { color: "rgba(207, 207, 207, 0.6)" }
+                }
+              >
+                My Playlist #14
+              </Typography>
             }
           />
         </ListItem>
@@ -142,9 +159,18 @@ function Sidebar() {
           <ListItemText
             disableTypography
             primary={
-              <Typography variant="p" onClick={e=>handleListTextClick(8)} style={{cursor:"pointer"}} color={focus===8?{color:"rgba(207, 207, 207, 0.9)"}:{color:"rgba(207, 207, 207, 0.6)"}} >
-              Sidhu
-            </Typography>
+              <Typography
+                variant="p"
+                onClick={(e) => handleListTextClick(8)}
+                style={{ cursor: "pointer" }}
+                color={
+                  focus === 8
+                    ? { color: "rgba(207, 207, 207, 0.9)" }
+                    : { color: "rgba(207, 207, 207, 0.6)" }
+                }
+              >
+                Sidhu
+              </Typography>
             }
           />
         </ListItem>
