@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { Container, Stack } from "@mui/system";
 import React, { useState } from "react";
+import Albums from "./Albums";
 import Goodevening from "./Goodevening";
 
 const AccountAvatar = styled(Stack)({
@@ -63,8 +64,10 @@ function Feed() {
         </Stack>
 
         {/* GOOD EVENING SECTION */}
-        
-        <Goodevening/>             
+
+        <Goodevening/>  
+
+        <Albums/>           
       </Container>
 
 {/* ------------------DROP-DOWN-MENU---------------- */}
