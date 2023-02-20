@@ -4,14 +4,12 @@ import {
   Avatar,
   Menu,
   Box,
-  Button,
   Divider,
   ListItemIcon,
   ListItemText,
   MenuItem,
   MenuList,
   Pagination,
-  Paper,
   Typography,
 } from "@mui/material";
 import { Container, Stack } from "@mui/system";
@@ -26,7 +24,6 @@ const AccountAvatar = styled(Stack)({
   borderRadius: "100px ",
 });
 
-const MyButton = styled(Button)({});
 
 function Feed() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -38,6 +35,7 @@ function Feed() {
     setAnchorEl(null);
   };
   return (
+
     <Box flex={5} px={2}>
       <Container sx={{ marginTop: "40px" }}>
         <Stack direction="row" justifyContent="space-between">
@@ -63,8 +61,13 @@ function Feed() {
             <ArrowDropDown />
           </AccountAvatar>
         </Stack>
-        <Goodevening/>
+
+        {/* GOOD EVENING SECTION */}
+        
+        <Goodevening/>             
       </Container>
+
+{/* ------------------DROP-DOWN-MENU---------------- */}
 
       <Menu
         id="demo-positioned-menu"
