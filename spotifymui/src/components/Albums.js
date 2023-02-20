@@ -14,7 +14,7 @@ function Albums() {
     <Box>
       <Grid container spacing={2}>
         <Grid item sm={3}>
-          <Card sx={{ maxWidth: 245 }}>
+          <Card sx={{ width: 200 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
