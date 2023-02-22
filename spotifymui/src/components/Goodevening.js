@@ -17,7 +17,7 @@ function Goodevening() {
   };
   return (
     <Box>
-      <Typography mb={3} mt={5} variant="h4" fontWeight={700}>
+      <Typography mb={3} mt={5} fontSize="1.7rem" fontWeight={700}>
         Good evening
       </Typography>
 
@@ -25,7 +25,7 @@ function Goodevening() {
         <Grid container spacing={2}>
           {recentData.map((card, index) => {
             return (
-              <Grid item sm={4}>
+              <Grid key={index} item xs={6} lg={4}>
                 <Card
                   onMouseEnter={() => visibilityHandler(index)}
                   onMouseLeave={() => setVisibility("hidden")}

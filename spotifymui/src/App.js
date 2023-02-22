@@ -21,6 +21,7 @@ function App() {
         <Stack direction="row">
           <Sidebar />
           <Feed />
+          <Navbar/>
         </Stack>
       </ThemeProvider>
     </Box>

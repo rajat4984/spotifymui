@@ -7,12 +7,12 @@ import {
   CardMedia,
   Fab,
   Grid,
+  Stack,
   Typography,
 } from "@mui/material";
-import { Stack } from "@mui/system";
 import React, { useState } from "react";
 
-function Albums({ data, sectionHeading }) {
+function Artist({ data, sectionHeading }) {
   const [visibility, setVisibility] = useState(-1);
 
   const visibilityHandler = (index) => {
@@ -27,10 +27,7 @@ function Albums({ data, sectionHeading }) {
         justifyContent="space-between"
         alignItems="center"
       >
-        <Typography
-          sx={{ fontSize: { sm: "1.5rem", xs: "1.2rem" } }}
-          fontWeight={700}
-        >
+        <Typography sx={{fontSize:{sm:"1.5rem",xs:"1.2rem"}}} fontWeight={700}>
           {sectionHeading}
         </Typography>
         <Typography color="text.secondary" fontWeight={500} component="a">
@@ -55,10 +52,13 @@ function Albums({ data, sectionHeading }) {
                 <CardActionArea sx={{ padding: "1em" }}>
                   <CardMedia
                     component="img"
-                    height="50%"
                     image={card.imgUrl}
                     alt="green iguana"
-                    sx={{ borderRadius: "5px" }}
+                    sx={{
+                      borderRadius: "50%",
+                      maxHeight: "182px",
+                      maxWidth: "182px",
+                    }}
                   />
                   <CardContent sx={{ padding: "16px 16px 16px 0" }}>
                     <Typography
@@ -67,7 +67,7 @@ function Albums({ data, sectionHeading }) {
                       fontWeight={700}
                       component="div"
                     >
-                      {card.title}
+                      {card.artistName}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       {card.desc}
@@ -97,4 +97,4 @@ function Albums({ data, sectionHeading }) {
   );
 }
 
-export default Albums;
+export default Artist;
